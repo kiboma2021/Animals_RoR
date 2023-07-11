@@ -25,7 +25,7 @@ class AnimalsController < ApplicationController
 
     respond_to do |format|
       if @animal.save
-        format.html { redirect_to animal_url(@animal), notice: "Animal was successfully created." }
+        format.html { redirect_to root_url, notice: "Animal was successfully created." }
         format.json { render :show, status: :created, location: @animal }
       else
         format.html { render :new, status: :unprocessable_entity }
