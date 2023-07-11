@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  roots "animals#index"
+  root "animals#index"
   resources :animals
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
