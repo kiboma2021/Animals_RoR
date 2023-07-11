@@ -1,17 +1,6 @@
-<div id="<%= dom_id comment %>">
+<% unless !comment.persisted? %>
   <p>
-    <strong>Body:</strong>
     <%= comment.body %>
   </p>
 
-  <p>
-    <strong>Animal:</strong>
-    <%= comment.animal_id %>
-  </p>
-
-  <p>
-    <strong>Parent:</strong>
-    <%= comment.parent_id %>
-  </p>
-
-</div>
+<% end %>
