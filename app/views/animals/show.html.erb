@@ -8,3 +8,15 @@
 
   <%= button_to "Destroy this animal", @animal, method: :delete %>
 </div>
+
+<br><br>
+<div>
+  <%= form_with(model: [@animal, @animal.comments.build]) do |form| %>
+    <div>
+      <%= form.label "Comments" %> <br>
+      <%= form.text_area :body %> <br>
+    </div><br>
+
+    <%= form.submit "Add Comment" %>
+  <% end %>
+</div>
