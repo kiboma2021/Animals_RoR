@@ -1,14 +1,27 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Animals</h1>
+  <div>
 
-<div id="animals">
-  <% @animals.each do |animal| %>
-    <%= render animal %>
-    <p>
-      <%= link_to "Show this animal", animal %>
-    </p>
-  <% end %>
-</div>
+  
+  <button class="rounded-none">
+    <%= link_to "New animal", new_animal_path %>
+  </button>
+  <hr>
 
-<%= link_to "New animal", new_animal_path %>
+  <h1 class="text-3xl font-bold underline">Animals</h1>
+
+  <br>
+
+  <div id="animals">
+    <% @animals.each do |animal| %>
+      <%= render animal %>
+      <p>
+        <%= link_to "Show this animal", animal, class:"bg-blue-100 px-4 py-2 rounded" %>
+      </p>
+    <% end %>
+  </div>
+
+
+
+
+<div>
