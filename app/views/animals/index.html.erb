@@ -12,14 +12,26 @@
 
   <br>
 
-  <div id="animals">
-    <% @animals.each do |animal| %>
-      <%= render animal %>
-      <p>
-        <%= link_to "Show this animal", animal, class:"bg-blue-100 px-4 py-2 rounded" %>
-      </p>
-    <% end %>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name </th>
+        <th>Description </th>
+        <th colspan="3">Action </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @animals.each do |animal| %>
+        <tr>
+          <td><%= animal.name %> </td>
+          <td><%= animal.description %> </td>
+          <td><%= link_to "Show", animal %>  </td>
+          <td><%= link_to "Edit", animal %>  </td>
+          <td><%= link_to "Delete", animal %>  </td>
+        <tr>
+      <% end %>
+    </tbody>
+  </table>
 
 
 
